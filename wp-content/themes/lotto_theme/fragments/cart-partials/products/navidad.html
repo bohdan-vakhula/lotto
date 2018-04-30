@@ -1,0 +1,69 @@
+﻿<div class="pay2linegeneral pay2linegeneralupper pay2linegeneraluppernavidad  pay2linegeneralupperanytype" ng-class="{'active': active==item.getId()}">
+    <div class="loto lotonavidad">
+        <div class="lotonavidadelninoinner"></div>
+    </div>
+    <div class="ticket">
+        <p>
+            loteria de navidad
+        </p>
+        <p>
+            2015 {{translation.Ticket}}
+        </p>
+    </div>
+    <div class="linesdraws lines">
+        <div class="wordlines">
+            <ng-pluralize count="item.getNumberOfLines()" when="{1: '{{translation.Share}}', 'other':'{{translation.Shares}}'}"></ng-pluralize>
+        </div>
+        <input type="text" ng-value="item.getNumberOfLines()" ng-disabled="true" />
+        <div class="arrows">
+            <div class="vmorelines">
+                <div class="morelinesinner" ng-click="progress || addShareNavidad(item)" ng-disabled="progress">
+                </div>
+            </div>
+            <div class="vlesslines">
+                <div class="lesslinesinner" ng-click="progress || removeShareNavidad(item)" ng-disabled="progress">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="view">
+        <div class="viewmoreless viewmore" ng-click="showDetail(item.getId())">
+            <div class="viewmorearrow"></div>
+        </div>
+        <div class="delicon" id="navidad{{item.getId()}}" ng-click="removeItem(item.getId())"></div>
+    </div>
+    <div class="total totalnavidad">
+        {{ item.getTotal() | currency:"&euro;" }}
+    </div>
+
+</div>
+<!--Middle line -->
+<div class="pay2linegeneral notalwaysseen pay2linegeneralnavidad">
+    <div class="specialfornavidad">
+        {{translation.Shares_Save_For}}
+        <div class="littleclock">
+        </div><span id="timer{{item.getId()}}">{{timer}}</span>
+    </div>
+</div>
+<!--Bottom line---->
+<div class="hiddenlinenumbers hiddenlinenumbersnavidad" ng-show="active==item.getId()">
+    <h3>
+        {{translation.Your_Tickets}}
+    </h3>
+    <div class="alllines alllinesof{{ item.getLotteryName() }}">
+        <div class="alloneline onelineof{{ item.getLotteryName() }}" ng-repeat="lines in item.getNumbersSantized() track by $index">
+            <div class="onelinetitle">
+                <p>
+                    {{translation.Ticket_Number}}
+                </p>
+            </div>
+            <div class="lineofnavidadticket">
+                <div class="number numberblue" ng-repeat="navidadNumber in item.getNavidadTicket()[0] track by $index">{{ navidadNumber }}</div>
+                <div class="middledash">-</div>
+                <div class="number numberorange" ng-repeat="navidadNumber in item.getNavidadTicket()[1] track by $index">{{ navidadNumber }}</div>
+                <div class="middledash">-</div>
+                <div class="number numberorange" ng-repeat="navidadNumber in item.getNavidadTicket()[2] track by $index">{{ navidadNumber }}</div>
+            </div>
+        </div>
+    </div>
+</div>

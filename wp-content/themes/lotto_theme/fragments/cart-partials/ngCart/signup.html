@@ -1,0 +1,128 @@
+﻿<div class="label-container">
+    <div class="label-top-part"></div>
+</div>
+
+<div class="clubform paymentnotloggedinmain paymentnotloggedinmainhtmlform wrap" data-ng-init="initSignUp()">
+
+    <!-- left form -->
+
+    <div id="rightformpart1" class="formpart rightformpart">
+
+        <h1>Sign in</h1>
+        <div id="loginformcontainer1" class="loginformcontainer">
+            <div class="openotherformwrap">
+                <span class="alreadymember opensans">{{translation.Already_Member}}</span>
+                <span class="openotherform_signup">
+                    <span class="alreadymemberlink">{{translation.Sign_Here}}</span>
+                </span>
+            </div>
+            <br>
+        </div>
+        <div id="formbluearea1" class="formbluearea">
+
+            <div id="innercontainerbluearea1" class="innercontainerbluearea" enter-submit>
+                <div id="inputemaildiv1" class="inputemaildiv">
+                    <input type="text" class="emailinputtext emailinputtextlogin" placeholder="{{translation.Email}}" ng-model="user.email" ng-keypress="($event.which === 13)?signin($event,user):0" />
+                </div>
+                <div id="inputpwddiv1" class="inputemaildiv  inputpwddiv">
+                    <input type="password" class="emailinputtext emailinputtextlogin" placeholder="{{translation.Password}}" ng-model="user.password" ng-keypress="($event.which === 13)?signin($event,user):0" />
+                </div>
+                <br>
+                <div id="forgotlinkdiv1" class="inputemaildiv forgotlinkdiv">
+                    <span id="forgotPassword" class="forgotlinkitself alreadymemberlink" ng-click="showForgotPassFields = ! showForgotPassFields">{{translation.Forgot_Password}}</span>
+                </div>
+                <br>
+                <br>
+                <div style="height:14px;"></div><!-- spacing for QA -->
+                <div id="inputforgotpwddiv1" class="" ng-show="showForgotPassFields">
+                    <input type="email" required class="" placeholder="Email" ng-model="user.forgotemail" />
+                </div>
+                <div id="placeforsigninbutton1" class="inputemaildiv placeforsigninbutton">
+                    <input type="button" class="signinbtnitslef" id="loginButton" value="{{translation.Sign_In}}" ng-click="signin($event,user)" ng-hide="showForgotPassFields" />
+                    <input type="button" style="" value="Submit" ng-click="forgotpass($event,user)" ng-show="showForgotPassFields">
+                </div>
+                <div ng-show="signinError" ng-bind="errorText"></div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div> <!--End login form-->
+
+    <!-- promo middle -->
+
+    <div class="signuproundpart">
+
+        <div class="lable-content">
+            <p class="joinandget">{{translation.Join_Now_And_Get}}</p>
+            <p class="welcomebonusnumber">100%</p>
+            <p class="welcomebonustext">{{translation.Welcome_bonus || lowercase}}</p>
+            <p class="bonuseqw">
+            Your Bonus<br>
+                <span class="bonuseqwnumber">&euro;{{ ngCart.totalCost() }}</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- right form -->
+
+    <div id="leftformpart1" class="formpart leftformpart">
+        <h1>Sign up</h1>
+        <div id="sigformcontainer1" class="loginformcontainer">
+            <div class="openotherformwrap">
+                <span id="otyetmember_oppos1_p1" class="alreadymember alreadymembersignup_2 opensans">{{translation.Not_Member}}</span>
+                <span class="openotherform_login">
+                    <span class="alreadymemberlink">{{translation.Sign_Up_Here}}</span>
+                </span>
+
+            </div>
+
+            <br>
+            <div id="innercontainersignarea1" class="innercontainerbluearea innercontainerwhitearea">
+                <div id="names" class="inputemaildiv countryandphonediv realphonenum">
+                    <div class="fnamediv">
+                        <input type="text" class="emailinputtext emailinputtextsignup fnameinputtext" placeholder="First Name" ng-model="signup.firstname" ng-keypress="($event.which === 13)?signUp($event,signup):0" />
+                    </div>
+                    <div class="lanemdiv">
+                        <input type="text" class="emailinputtext emailinputtextsignup lnameinputtext" placeholder="Last Name" ng-model="signup.lastname" ng-keypress="($event.which === 13)?signUp($event,signup):0" />
+                    </div>
+                </div>
+                <div id="inputpwddiv3" class="inputemaildiv">
+                    <input type="email" class="emailinputtext emailinputtextsignup" placeholder="{{translation.Email}}" ng-model="signup.email" ng-keypress="($event.which === 13)?signUp($event,signup):0" />
+                </div>
+                <div id="inputemaildivsignup1" class="inputemaildiv inputpwddiv inputpwddivsignup">
+                    <input type="password" class="emailinputtext emailinputtextsignup" placeholder="{{translation.Password}}" ng-model="signup.password" ng-keypress="($event.which === 13)?signUp($event,signup):0" />
+                </div>
+                <div id="countryandphonediv1" class="inputemaildiv countryandphonediv realphonenum">
+                    <div id="countrydiv1" class="countrydiv">
+                        <select ng-model="country_code" ng-options="country.name for country in country_codes track by country.code" ng-change="setPrefix(country_code.code)">
+                            <option value="" class="label">{{translation.Country}}</option>
+                        </select>
+                    </div>
+                    <div id="phonediv1" class="phonediv">
+                        <input type="text" class="emailinputtext emailinputtextsignup phonedivinputtext" placeholder="{{translation.Phone}}" ng-model="signup.MobileNumber" ng-keypress="($event.which === 13)?signUp($event,signup):0" />
+                    </div>
+                </div><!--End country-phone div-->
+
+                <div class="clear"></div>
+
+                <div id="welcomebonusandbutton1" class="inputemaildiv countryandphonediv welcomebonusandbutton">
+                    <div id="placeforsigninbutton2" class="inputemaildiv placeforsigninbutton placeforsignupbutton">
+                        <input type="button" class="signinbtnitslef" id="signupButton" value="{{translation.Sign_Up}}" ng-click="signUp($event,signup)" />
+                    </div>
+
+                </div>
+
+                <div class="clear"></div>
+
+                <div ng-show="signupError" ng-repeat="error in signupErrorText | translate track by $index">{{error}}</div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div><!--End signup form-->
+    <div class="clear"></div>
+</div>
+
+<br><br>

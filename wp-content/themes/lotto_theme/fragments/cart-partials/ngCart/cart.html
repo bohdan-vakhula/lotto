@@ -1,0 +1,172 @@
+<div class="mainnewpay2" data-ng-init="initCart()">
+
+    <div class=" alert alert-warning" role="alert" ng-show="ngCart.getTotalItems() === 0">
+        <!--{{translation.Empty_Cart}}-->
+
+        <!-- top picks
+
+        <div class="mainnewpay2innertitle">
+            <h2 class="yourordertitle">
+                Shopping Cart
+            </h2>
+
+            <div class="linksline">
+                <span>Top picks:</span>
+                <a href="/{{language}}/quickpick/MegaMillions/group/1/2/0/0/0/">
+                    MegaMillions
+                </a>
+                <a href="/{{language}}/quickpick/Powerball/group/1/2/0/0/0/">
+                    Powerball
+                </a>
+                <a href="/{{language}}/quickpick/EuroMillions/group/1/2/0/0/0/">
+                    EuroMillions
+                </a>
+                <a href="/{{language}}/quickpick/Lotto649/group/1/2/0/0/0/">
+                    Lotto649
+                </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        /-->
+
+        <div class="hideEmptyCart" ng-hide="hideEmptyCart">
+            <h1 class="emptycartbig">Shopping cart</h1 >
+            <h2  class="emptycartbig emptycartbig2">is empty</h2 >
+            <div class="emptycartimg"></div>
+            <br><br>
+            <h2  class="noitmessmall">You have no items in your cart</h2 >
+            <br><br>
+            <button class="addticket" ng-click="redirectToPlayPageTopJackpot()">Please add a ticket</button>
+            <br><br><br><br>
+        </div>
+
+        <div class="cart-page">
+
+            <div ng-show="showFreeTicket" class="cart-static">
+                <span class="part1">Lottery Name</span>
+                <span class="part2">Lines</span>
+                <span class="part3">Draws</span>
+                <span class="part4">PRICE</span>
+            </div>
+
+            <div ng-show="showFreeTicket" class="payment2line">
+                <div class="pay2linegeneral pay2linegeneralupper" ng-switch on="item.getProductType()">
+                    <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/products/freeproduct.html'"></ng-include>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div ng-hide="ngCart.getTotalItems() === 0">
+        <div class="cart-page">
+
+            <!-- top picks
+
+            <div class="mainnewpay2innertitle">
+                <h2 class="yourordertitle">
+                    {{translation.Your_Order}}
+                </h2>
+
+                <div class="linksline">
+                    <span>Top picks:</span>
+                    <a href="/{{language}}/quickpick/MegaMillions/group/1/2/0/0/0/" id="cart_top_picks_megamillions">
+                        MegaMillions
+                    </a>
+                    <a href="/{{language}}/quickpick/Powerball/group/1/2/0/0/0/" id="cart_top_picks_powerball">
+                        Powerball
+                    </a>
+                    <a href="/{{language}}/quickpick/EuroMillions/group/1/2/0/0/0/" id="cart_top_picks_euromillions">
+                        EuroMillions
+                    </a>
+                    <a href="/{{language}}/quickpick/Lotto649/group/1/2/0/0/0/" id="cart_top_picks_lotto649">
+                        Lotto649
+                    </a>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            /-->
+
+            <div class="cart-static">
+                <span class="part1">Lottery Name</span>
+                <span class="part2">Lines</span>
+                <span class="part3">Draws</span>
+                <span class="part4">PRICE</span>
+
+            </div>
+            <div class="product-line" ng-repeat="item in ngCart.getCart().items track by $index" ng-attr-id="{{item.getId()}}">
+                <div class="pay2linegeneral pay2linegeneralupper" ng-switch on="item.getProductType()">
+                    <div ng-switch-when="1">
+                        <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/products/personal.html'"></ng-include>
+                    </div>
+                    <div ng-switch-when="2">
+                        <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/products/personalandgroup.html'"></ng-include>
+                    </div>
+                    <div ng-switch-when="3">
+                        <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/products/group.html'"></ng-include>
+                    </div>
+                    <div ng-switch-when="4">
+                        <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/products/gold.html'"></ng-include>
+                    </div>
+                    <div ng-switch-when="14">
+                        <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/products/toplottogroup.html'"></ng-include>
+                    </div>
+                    <div ng-switch-when="15" ng-controller="NavidadController">
+                        <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/products/navidad.html'"></ng-include>
+                    </div>
+
+                    <div ng-switch-when="20" ng-controller="NavidadController">
+                        <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/products/summerholiday.html'"></ng-include>
+                    </div>
+                    <div ng-switch-when="19">
+                        <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/products/jackpot247.html'"></ng-include>
+                    </div>
+                    <div ng-switch-when="24" ng-controller="NavidadController">
+                        <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/products/ElNino.html'"></ng-include>
+                    </div>
+                    <div ng-switch-when="26" ng-controller="NavidadController">
+                        <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/products/Valentine.html'"></ng-include>
+                    </div>
+                    <div ng-switch-when="666">
+                        <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/products/sproduct.html'"></ng-include>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="product-line" ng-if="showFreeTicket">
+                <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/products/freeproduct.html'"></ng-include>
+            </div>
+        </div>
+        <!--Control 3 -Checkout -->
+        <div class="checkoutmain">
+            <div class="checkoutmaininner">
+                <div class="checkoutmaintitle">
+                    <p>
+                        {{translation.Checkout}}
+                    </p>
+                </div>
+                <div class="chceckboxes">                    <div class="checkboxline">
+                        <!-- <input type="checkbox" ng-model="fastProcessing" ng-change="fastProcessingChanged()"> -->                        <!-- <div class="checkboxsentence"> -->                            <!-- {{translation.Fast_Processing}} -->                            <!-- <span id="fastprocessingnum">{{ngCart.getFastProcessingTax()}}</span> -->                            <!-- <span class="more-info">?</span> -->                        <!-- </div> -->                        <div id="checkboxcart" class="checkboxsign" ng-mouseover="showtooltipcart('checkboxcart')" ng-mouseout="hidetooltipcart('checkboxcart')">                            <div id="checkboxcartinner" class="checkboxsigntooltip" ng-show="tooltipcart=='checkboxcart'">                                <p>{{translation.Fast_Processing_ToolTip}}</p>                            </div>                        </div>                    </div>
+                    <div class="checkboxline">                        <input type="checkbox" ng-click="popuppromo();" ng-init="initpopuppromo(ngCart.getReedemCode())" ng-checked="ngCart.getReedemCode()" />                        <div class="checkboxsentence">                            {{translation.Promo_Code}}                            <span class="more-info">?</span>                        </div>                        <!--<div class="checkboxsign">                        </div>-->                    </div>                    <div class="checkboxpromo" ng-show="promoactive==true">                        <input id="TextBoxPromoCode" type="text" placeholder="___-___- ___" ng-keypress="promoCodeValidator($event)" ng-model="promoCode" />                        <div class="validorinvalid">                            <!--<div class="clearthepromo" ng-click="removePromoCode()">-->                            <div class="clearthepromo" ng-show="redeemCodeWrong"></div>                            <div class="validpromocode" ng-show="redeemCodeOk"></div>                        </div>                        <button class="deposit" ng-click="submitPromoCode($event,promoCode)">                            {{translation.Redeem}}                        </button>                        <span class="codesuccess">                            <span id="LabelPromoMessage">Code succeeded</span>                        </span>                        <span class="invalid">                            <span id="LabelPromoError">Invalid Code</span>                        </span>                    </div>                </div>
+                <div class="prices">                    <div class="totalorder">                        {{translation.Total_Order}}                    </div>                    <div class="numberprice">                        <span id="finalprice">{{ ngCart.totalCost() - ngCart.getReedemBonusAmount() | currency:"&euro;" }}</span>                    </div>                </div>
+                <div class="promodiscount" ng-show="ngCart.getRedeemAmount() > 0">                    <span class="promodiscountwords">Promo code discount</span>                    <span class="promodiscountnum">- {{ngCart.getRedeemAmount()}}</span>                </div>
+            </div>            <div class="clear"></div>        </div>        <div class="clear"></div>    </div></div>
+
+<div class="content ani" ng-switch on="section.selectionPaymentTemplate" ng-hide="ngCart.getTotalItems() === 0">
+    <div ng-switch-when="new">
+        <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/ngCart/paymentnew.html'"></ng-include>
+    </div>
+    <div ng-switch-when="exist">
+        <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/ngCart/paymentexist.html'"></ng-include>
+    </div>
+    <div ng-switch-when="signup">
+        <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/ngCart/signup.html'"></ng-include>
+    </div>
+</div>
+<div class="content ani">
+    <ng-include class="animate-switch" src="'/wp-content/themes/lotto_theme/fragments/cart-partials/ngCart/signup.html'" ng-show="!isAuthenticated && showFreeTicket && ngCart.getTotalItems() === 0"></ng-include>
+</div>

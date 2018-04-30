@@ -1,0 +1,13 @@
+{   
+	"JOIN" : "Rejoignez un groupe et augmenter vos chances de",
+	"WIN" : "gagner à la loterie!",
+	"SIGN_UP" : "Inscrivez-vous et obtenez un billet de loterie gratuit",
+	"NAME" : "Ton nom",
+	"MAIL" : "Adresse e-mail",
+	"MobilePhone" : "Les numéros de telephone",
+	"SUBMIT" : "Continuez",
+	"NEXT_DRAW" : "Temps restant a jouer :",
+	"fieldName_Name" : "Nom",
+	"fieldName_Phone" : "Téléphone",
+	"fieldName_Mail" : "Messagerie"
+}

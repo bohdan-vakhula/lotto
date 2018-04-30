@@ -1,0 +1,91 @@
+﻿<!-- new credit card template -->
+
+<div class="clubform mainpaymenttabs mainpaymenttabsexist">
+    <div class="tabspart">
+        <div class="tabsline">
+            <div class="tab-single">
+                <img ng-src="../wp-content/themes/lotto_theme/images/payments/creditcards.jpg" src="../wp-content/themes/lotto_theme/images/payments/creditcards.jpg">
+            </div>
+
+        </div>
+        <div class="formpart credit formpartexist">
+            <div class="formparttop">
+                <div class="formcol formcolleft">
+                    <h4>
+                        <span ng-show="ngCart.getAmountToPay() === 0">{{translation.Wallet}}</span>
+                        <span ng-show="ngCart.getAmountToPay() > 0">{{translation.Your_Payment_Methods}}</span>
+                    </h4>
+                    <div class="dropdowncard">
+                        <div class="dropdowncardtitle field">
+                            <select ng-model="selectedmethod" ng-options="item as item.Processor + ' ' + item.UserNamePhoneCcNum for item in ngCart.getIframePaymentMethods() track by item.MethodId" class="visa"
+                                    ng-change="paymentMethodSelected(selectedmethod.MethodId, selectedmethod.Processor)">
+                                <!--<option value=""></option>-->
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="formpartlink">
+                        <a ng-click="ngCart.getAmountToPay() > 0 && editPaymentMethods()" ng-show="ngCart.getAmountToPay() > 0">{{translation.Add_Payment_Methods}}</a>
+                    </div>
+
+                    <br>
+                        <span ng-show="paymentMethodError" ng-bind="paymentMethodErrorText"></span>
+                    <br>
+                    <span ng-show="creditCard" ng-repeat="error in creditCardError | translate track by $index">{{error}}</span>
+                </div>
+                <div class="formcol formcolright">
+                    <br>
+                    <div class="agreetoterms">
+                        <input type="checkbox" ng-model="terms" />
+                        <div class="agreesentence">
+                            {{translation.I_agree}}
+                            <a href="https://www.orolotto.com/terms-and-conditions/" target="_blank">
+                                {{translation.Terms_Conditions}}
+                            </a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="paysubmit field">
+
+                        <div class="pay">
+                            <div class="payword">
+                                {{translation.Pay}}
+                            </div>
+                            <div class="payprice">
+                                <span id="totalprice"> {{ ngCart.getAmountToPay() | currency:"&euro;" }}</span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="submit">
+                            <input type="button" value="{{translation.Submit_Order}}" ng-click="progress || submitOrder(selectedmethod,terms)" id="paymentbutton">
+                        </div>
+
+
+                        <div class="clear"></div>
+                        <br>
+
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+
+            <div class="clear"></div>
+        </div><!--End form part top-->
+        <div class="formpartbottom">
+            <div class="formcol formcolleft">
+
+            </div>
+            <div class="formcol formcolright">
+            </div>
+            <div class="clear"></div>
+        </div><!--End form part bottom-->
+    </div>
+</div>
+<div id="hidden_clicker" style="display: none">
+    <a id="hiddenclicker" href="#" class="fancybox fancybox.iframe"></a>
+</div>
+
+<br><br>

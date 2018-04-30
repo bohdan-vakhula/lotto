@@ -1,0 +1,121 @@
+﻿<!-- deposit page template -->
+
+
+
+<div id="middle" class="innerbg_select_page">
+
+
+<div class="wrap">
+        <div class="banner_txt">
+            <div class="hadding" style="padding: 50px 0px 0px 20px;">
+                <h1>Deposit money to your account</h1>
+            </div>
+        </div>
+
+<br><br><br><br><br><br><br><br><br>
+
+
+<div class="clubform mainpaymenttabs mainpaymenttabsexist mainpaymenttabsdeposit">
+    <div class="tabspart">
+        <div class="tabsline">
+            <div class="tab-single">
+                <img ng-src="../../wp-content/themes/lotto_theme/images/payments/creditcards.jpg" src="../../wp-content/themes/lotto_theme/images/payments/creditcards.jpg">
+            </div>
+
+        </div>
+        <div class="formpart credit formpartexist">
+            <div class="formparttop">
+                <div class="formcol formcolleft">
+                    <h4>
+                        <span ng-show="ngCart.getAmountToPay() === 0">{{translation.Wallet}}</span>
+                        <span ng-show="ngCart.getAmountToPay() > 0">{{translation.Your_Payment_Methods}}</span>
+                    </h4>
+                    <div class="dropdowncard">
+                        <div class="dropdowncardtitle field">
+                            <select ng-model="selectedmethod" ng-options="item as item.Processor + ' ' + item.UserNamePhoneCcNum for item in ngCart.getIframePaymentMethods() track by item.MethodId" class="visa"
+                                    ng-change="paymentMethodSelected(selectedmethod.MethodId, selectedmethod.Processor)">
+                                <!--<option value=""></option>-->
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+
+                    <div class="formpartlink">
+                        <a ng-click="editPaymentMethods()">{{translation.Add_Payment_Methods}}</a>
+                    </div>
+
+                <br>
+                <span ng-show="paymentMethodError" ng-bind="paymentMethodErrorText">111</span>
+                <span ng-show="creditCard" ng-repeat="error in creditCardError | translate track by $index">{{error}}</span>
+                <div class="ng{{statusclass}}">{{status}}</div>
+
+                <br>
+
+                </div>
+                <div class="formcol formcolright">
+                    <div class="agreetoterms">
+                        <input type="checkbox" ng-model="terms" />
+                        <div class="agreesentence">
+                            {{translation.I_agree}}
+                            <a href="/terms-and-conditions/" target="_blank">
+                                {{translation.Terms_Conditions}}
+                            </a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="paysubmit">
+                        <div class="pay">
+                            {{"&euro;"}}<input type="text" ng-model="depositAmount" required valid-number-decimal />
+                        </div>
+                        <div class="submit">
+                            <input type="button" value="{{translation.Submit_Order}}" ng-click="depositFunds(selectedmethod, depositAmount, terms)">
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+
+
+
+            <div class="clear"></div>
+        </div><!--End form part top-->
+
+        <div class="formpartthankyoudeposit" ng-show="thankyoudeposit==1">
+
+            <div class="formparttopjackpots">
+                <div class="topjackpotslide1">
+                </div>
+                <div class="topjackpotslide2">
+                </div>
+                <div class="topjackpotslide3">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="formpartbottom">
+
+            <br><br>
+            <div class="formcol formcolleft">
+            </div>
+            <div class="formcol formcolright">
+
+            </div>
+            <div class="clear"></div>
+        </div><!--End form part bottom-->
+    </div>
+</div>
+<div id="hidden_clicker" style="display: none">
+    <a id="hiddenclicker" href="#" class="fancybox fancybox.iframe"></a>
+</div>
+
+
+<br><br><br><br>
+
+ </div>
+
+</div>

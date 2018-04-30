@@ -1,0 +1,65 @@
+﻿<div class="ticketpopup">
+    <div class="column tickettablecolumn">
+        <div class="title uppertitle">
+            <div class="titlewrite">
+                <span>{{translation.Line}} {{line}}</span>
+            </div>
+            <div class="clearquickpick">
+                <div class="quickpick" ng-click="quickpick(line)">
+                </div>
+                <div class="clear" ng-click="clearLine(line)"></div>
+            </div>
+        </div>
+        <div class="title">
+            <span>
+                {{translation.Select}} {{item.getMaxSelectNumbers()}} {{translation.Numbers}}
+            </span>
+            
+        </div>
+        <div class="numbers line1" id="line1">
+            <div class="number" ng-repeat="number in selectedNumbers" ng-class="{selected: number.isSelected ==  1}" ng-click="clickNumber(number)">
+                {{number.id}}
+            </div>
+            <!--<div class="clear">            </div>-->
+
+        </div>
+        <div class="clear"></div>
+        <div class="title" id="title_line_1_extra" ng-show="selectedNumbersExtra.length">
+            <div class="title" ng-switch on="item.getLotteryType()">
+                <span ng-switch-when="1">
+                    {{translation.Select_Your_PowerBall}}
+                </span>
+                <span ng-switch-when="2">
+                    {{translation.Select_Your_MegaBall}}
+                </span>
+                <span ng-switch-when="5">
+                    {{translation.Select_Your_LuckyNumbers}}
+                </span>
+                <span ng-switch-when="9">
+                    {{translation.Select_Your_EuroStars}}
+                </span>
+                <span ng-switch-default>
+                </span>
+            </div>
+        </div>
+        <div class="extranumbers line1" id="extra_line1">
+            <div class="number"  ng-repeat="number in selectedNumbersExtra" ng-class="{selected: number.isSelected ==  1}" ng-click="clickNumberExtra(number)">
+                {{number.id}}
+            </div>
+          
+            <div class="clear">
+            </div>
+        </div>
+
+        <div class="cancelsave">
+            <div class="ticketbutton buttoncancel" ng-click="closeThisDialog('Some value')">
+                <span>{{translation.Cancel}}</span>
+            </div>
+            <div class="ticketbutton buttonsave" ng-click="isValidExtraLine && isValidSelectLine && checkInput(line) && closeThisDialog('Some value')">
+
+                <span>{{translation.Save}}</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div><!--End column -->
+</div><!--End ticket pop up -->

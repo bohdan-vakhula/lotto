@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text\css" href="/CSS_1/iceLotto/styles/Global.css" />
+    <title></title>
+</head>
+<body>
+    <div class="mainnewpay2">
+        <div class="block">
+            <div class="mainnewpay2inner">
+                <div class="payment2line payment2linetopjackpot payment2lineanytype">
+                    <div class="producttypeicon producttypeicontopjackpot"></div>
+
+                    <div class="pay2linegeneral pay2linegeneralupper pay2linegeneralupperanytype">
+                        <div class="loto">
+                            <img src="/CSS_1/globalImages/top-jackpot.png" alt="Top Jackpot" />
+                        </div>
+                        <div class="ticket">
+                            top jackpot
+                            <span class="groupword">
+                                group
+                            </span>
+                        </div>
+                        <div class="linesdraws lines">
+                            <div class="wordlines">
+                                Shares
+                            </div>
+                            <input type="text" value="1" />
+                            <div class="arrows">
+                                <div class="vmorelines">
+                                    <div class="morelinesinner" ng-click="progress || addLine(item)" ng-disabled="progress">
+
+                                    </div>
+                                </div>
+                                <div class="vlesslines">
+                                    <div class="lesslinesinner" ng-click="progress || removeLine(item)" ng-disabled="progress">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="linesdraws draws">
+                            <div class="wordlines">
+                                Draws
+                            </div>
+                            <input type="text" value="1" />
+                            <div class="arrows">
+                                <div class="vmorelines">
+                                    <div class="morelinesinner" ng-click="progress || addDraw(item)" ng-disabled="progress">
+                                    </div>
+                                </div>
+                                <div class="vlesslines">
+                                    <div class="lesslinesinner" ng-click="progress || removeDraw(item)" ng-disabled="progress">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="view"></div>
+                        <div class="total">
+                            100
+                        </div>
+                        
+                    </div>
+                    <!--Middle line -->
+                    <div class="pay2linegeneral notalwaysseen">
+                        <div class="subscription" ng-hide="item.getLotteryType() === 13">
+                            <input type="checkbox" ng-model="subscription" ng-change="subscriptionChanged('{{item.getId()}}')" ng-checked="{{item.getIsSubscription()}}" />
+                            <div class="checkboxsentence">
+                                Subscription - Never miss a draw
+                            </div>
+                            <div class="checkboxsign">
+
+                            </div>
+
+
+                        </div>
+                        <div class="draws" ng-show="item.getTotalDiscount() > 0">
+
+
+                            <p class="savetext">
+                                On this purchase you save
+                            </p>
+                            <p class="savenumber">
+                                2
+                                draws discount
+                                (2%)
+                            </p>
+                        </div>
+                        
+
+                        <div class="view">
+                            <div class="delicon" ng-click="removeItem(item.getId())"></div>
+                        </div>
+                        <div class="total" ng-show="item.getTotalDiscount() > 0">
+                            <p>
+                                - &euro; 28
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

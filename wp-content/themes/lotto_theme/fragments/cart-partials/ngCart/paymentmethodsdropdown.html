@@ -1,0 +1,16 @@
+﻿<div class="dropdowncard">
+    <div class="dropdowncardtitle">
+        <div class="greyside">
+            <div class="cardlogo mastercard"></div>
+        </div>
+        <span class="mastercard">MasterCard **** **** **** 1234</span>
+    </div>
+    <div class="dropdownalloptions">
+        <div class="option" ng-repeat="method in ngCart.getIframePaymentMethods()">
+            <div class=" greyside">
+                <div class="cardlogo visalogo {{method.CreditCardTypeOrProcessorName | lowercase}}"></div>
+            </div>
+            <span class="mastercard" ng-click="paymentMethodSelected(method.MethodId, method.Processor)">{{method.CreditCardTypeOrProcessorName}} {{method.UserNamePhoneCcNum}}</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,127 @@
+﻿<div class="payment2line payment2linepersonalandgroup payment2lineanytype">
+    <div class="producttypeicon producttypeiconpg"></div>
+    <div class="pay2linegeneral pay2linegeneralupper pay2linegeneralupperanytype" >
+        <div class="loto">
+            <img ng-src="/CSS_1/globalImages/Result/{{ item.getLotteryName() }}.png" alt="{{ item.getLotteryName() }} " />
+        </div>
+        <div class="ticket">
+            {{ item.getLotteryName() }}
+            <span class="groupword">
+                {{translation.personal+group}}
+            </span>
+        </div>
+        <div class="linesdraws lines">
+            <div class="wordlines">
+                {{translation.QTY}}
+            </div>
+            <input type="text" ng-value="item.getQuantity()" ng-disabled="true" />
+            <div class="arrows">
+                <div class="vmorelines">
+                    <div class="morelinesinner" ng-click="progress || addQuantity(item)" ng-disabled="progress">
+                    </div>
+                </div>
+                <div class="vlesslines">
+                    <div class="lesslinesinner" ng-click="progress || removeQuantity(item)" ng-disabled="progress">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="linesdraws draws">
+            <div class="wordlines">
+                <ng-pluralize count="item.getNumberOfDraws()" when="{1: '{{translation.Draw}}', 'other':'{{translation.Draws}}'}">></ng-pluralize>
+            </div>
+            <input type="text" ng-value="item.getNumberOfDraws()" ng-disabled="true" />
+            <div class="arrows">
+                <div class="vmorelines">
+                    <div class="morelinesinner" ng-click="progress || addDraw(item)" ng-disabled="progress">
+                    </div>
+                </div>
+                <div class="vlesslines">
+                    <div class="lesslinesinner" ng-click="progress || removeDraw(item)" ng-disabled="progress">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="view" ng-click="showDetail(item.getId())">
+            <div class="viewmoreless viewmore">
+                <div class="viewmorearrow"></div>
+            </div>
+        </div>
+        <div class="total">
+            {{ item.getTotal() | currency:"&euro;" }}
+        </div>
+    </div>
+    <!--Middle line -->
+    <div class="pay2linegeneral notalwaysseen">
+        <div class="subscription">
+            <input type="checkbox" ng-model="subscription" ng-click="subscriptionChanged(item.getId())" ng-checked="{{item.getIsSubscription()}} " />
+            <div class="checkboxsentence">
+                {{translation.Subscription_Title}}
+            </div>
+            <div class="checkboxsign" ng-mouseover="showthetooltip(item.getId())" ng-mouseout="hidethetooltip(item.getId())">
+
+                <div class="checkboxsigntooltip" ng-show="tooltipshown==item.getId()">
+                    <p>{{translation.Subscription_ToolTip}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="draws" ng-show="item.getTotalDiscount() > 0">
+            <p class="savetext">
+                {{translation.Purchase_Save}}
+            </p>
+            <p class="savenumber">
+                {{ item.getNumberOfDraws() }}
+                {{translation.Draws}}
+                {{translation.Discount}}
+                ({{ item.getDiscount() * 100 }}%)
+            </p>
+        </div>
+        <div class="view">
+            <div class="delicon" ng-click="removeItem(item.getId())"></div>
+        </div>
+        <div class="total" ng-show="item.getTotalDiscount() > 0">
+            <p>
+                - {{ item.getTotalDiscount() | currency:"&euro;" }}
+            </p>
+        </div>
+    </div>
+    <!--Down line-->
+    <div class="hiddenlinenumbers" ng-show="active==item.getId()">
+        <div class="partpersonal">
+            <h3>
+                {{translation.Your_Lines}}
+            </h3>
+            <div class="alllines alllinesof{{ item.getLotteryName() }}">
+                <div class="alloneline onelineof{{ item.getLotteryName() }}" ng-repeat="lines in item.getNumbersSantized() track by $index">
+                    <div class=" onelinetitle">
+                        <p>
+                            {{translation.Line}} {{$index + 1}}
+                        </p>
+                        <div>
+                        </div>
+                    </div>
+                    <div class="lineofnumbers">
+                        <div class="number numberblue" ng-repeat="number in item.getLinesNumbers($index) track by $index ">{{number}}   </div>
+                        <div class="number numberorange" ng-repeat="specialnumber in item.getLinesSpecialNumbers($index) track by $index">{{specialnumber}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="partplus">
+            +
+        </div>
+        <div class="partgroup">
+            <div class="alllines">
+                <div class="onelinetitle">
+                    <h3>
+                        {{translation.Your_Group}}
+                    </h3>
+                </div>
+                <div class="bigproducticon bigproducticonpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

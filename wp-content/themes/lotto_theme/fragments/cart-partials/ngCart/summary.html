@@ -1,0 +1,132 @@
+<div class="paymentheadercontrol">
+    <div class="pricecart">
+        <div class="pricecarttitle">
+            <p>
+            <span class="cart-icon"></span>
+                <span>{{ ngCart.totalCost() | currency:"&euro;" }}</span>
+                <!--<ng-pluralize count="ngCart.getTotalItems()" when="{1: '', 'other':''}"></ng-pluralize>-->
+                <br />
+            </p>
+        </div>
+
+        <div id="cart" class="cartpopup">
+
+            <!-- titile of box 
+            <div class="cartpopuptitlearea">
+                <h2>
+                    {{translation.Your_cart}}
+                </h2>
+            </div>
+            /-->
+            
+            <div class="cartpopupcontentarea">
+
+                <!-- promo items 
+                <div class="cartpopupcontentareapart cartpopupcontentarealeft">
+
+                    <div class="dashedallpart">
+                        <div class="dashedpart dashedwelcombonuspart">
+                            <span class="dash1">100%</span>
+                            <span class="dash2">{{translation.Welcome_bonus}}</span>
+
+                        </div>
+                        <div class="dashedpart dashedvippointspart">
+                            <span id="vippoints" class="dash1"></span>
+                            <span class="dash2">{{translation.Vip_Points}}</span>
+                        </div>
+                        <div class="dashedpart dashedbonusmoneypart">
+                            <span id="bonusmoney" class="dash1"></span>
+                            <span class="dash2">{{translation.Bonus_Money}}</span>
+                        </div>
+                    </div>
+                </div>
+                /--> 
+
+
+                <div class="cartpopupcontentareapart cartpopupcontentarearight" ng-show="ngCart.getTotalItems() === 0 && !showFreeTicket">
+                    <div class="cartempty">
+                        {{translation.Empty_Cart}}
+                    </div>
+                </div>
+                <div class="cartpopupcontentareapart cartpopupcontentarearight">
+
+                    <div class="drawstablerow" ng-show="showFreeTicket">
+                        <div class="drawstablerowlogo drawstablerowlogoMegaMillions">
+                            <div class="drawtableinner drawtableinnerMegaMillions"></div>
+                        </div>
+                        <div class="drawname">
+                            <span>MegaMillions</span>
+                        </div>
+                        <div class="pricecol">
+                            <span>{{ 0 |  currency:"&euro;"}}</span>
+                        </div>
+                        <div class="icondel">
+                            <div class="realicon" ng-click="removeItem(item.getId())"></div>
+                        </div>
+                    </div>
+
+                    <div class="drawstablerow" ng-repeat="item in ngCart.getTopNItems(5) track by $index">
+
+                        <div class="drawstablerowlogo drawstablerowlogo{{ item.getlotteryname() }}">
+                            <div class="drawtableinner drawtableinner{{ item.getLotteryName() }}"></div>
+                        </div><span ng-if="item.getProductType()===15 || item.getProductType()===24 || item.getProductType()===26 || item.getProductType()===20" ng-controller="NavidadController" ng-init="init(item.getId())"></span>
+                        <div class="drawname">
+                            <span>{{ item.getLotteryName() }}</span>
+                        </div>
+                        <div class="pricecol">
+                            <span>{{ item.getTotalCost() |  currency:"&euro;"}}</span>
+                        </div>
+                        <div class="icondel">
+                            <div class="realicon" ng-click="removeItem(item.getId())"></div>
+                        </div>
+                    </div>
+
+                    <div class="resultsrow" ng-show="ngCart.getTotalItems() > 0">
+                        <div class="resultsrowtotalorder">
+                            <span>{{translation.Total_Order}}</span>
+                        </div>
+                        <div class="resultrowprice">
+                            <span>{{ ngCart.totalCost() - ngCart.getReedemBonusAmount() | currency:"&euro;" }}</span>
+                        </div>
+                    </div>
+                    <div class="checkoutbtnrow" ng-show="ngCart.getTotalItems() > 0">
+                        <input type="submit" id="checkout" value="{{translation.Checkout}}" ng-click="redirectToCart($event);" />
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+<!--End whole price cart-->
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        if (CONFIG.isLogin) {
+            // $('#vippoints').text(VIPPOINTS);
+            // $('#bonusmoney').html(BONUSMONEY + "&euro;");
+        }
+
+        var cart = $('#cart');
+        var classToSet = CONFIG.isLogin ? "loggedin" : "loggedout";
+
+        cart.addClass(classToSet);
+
+        $('.pricecart').hover(
+            function () {
+                $(this).children(':eq(1)').show();
+            },
+            function () {
+                $(this).children(':eq(1)').hide();
+            }
+        );
+    });
+    //Price cart hover
+
+</script>

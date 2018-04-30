@@ -1,0 +1,89 @@
+﻿<div class="product-top pay2linegeneral pay2linegeneralupper pay2linegeneraluppergroup pay2linegeneralupperanytype">
+    <div class="producttypeicon producttypeicongroup"></div>
+    <div class="loto lotofor{{ item.getLotteryName() }}">
+        <div class="lottinner sliderlogo{{ item.getLotteryName() }}"></div>
+    </div>
+    <div class="ticket">
+        {{ item.getLotteryName()}}
+        <span class="groupword">
+            group
+        </span>
+    </div>
+    <div class="linesdraws lines">
+        <div class="wordlines">
+            <ng-pluralize count="item.getGroupnoshares()" when="{1: '{{translation.Share}}', 'other':'{{translation.Shares}}'}" />
+        </div>
+        <input type="text" ng-value="item.getGroupnoshares()" ng-disabled="true" />
+        <div class="arrows" ng-hide="item.getProductIdSpecial() === 999">
+            <div class="vmorelines">
+                <div class="morelinesinner" ng-click="progress || addShare(item)" ng-disabled="progress">
+
+                </div>
+            </div>
+            <div class="vlesslines">
+                <div class="lesslinesinner" ng-click="progress || removeShare(item)" ng-disabled="progress">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="linesdraws draws">
+        <div class="wordlines">
+            <ng-pluralize count="item.getGroupnodraws()" when="{1: '{{translation.Draw}}', 'other':'{{translation.Draws}}'}" />
+        </div>
+        <input type="text" ng-value="item.getGroupnodraws()" ng-disabled="true" />
+        <div class="arrows" ng-hide="item.getProductIdSpecial() === 999">
+            <div class="vmorelines">
+                <div class="morelinesinner" ng-click="progress || addDraw(item)" ng-disabled="progress">
+                </div>
+            </div>
+            <div class="vlesslines">
+                <div class="lesslinesinner" ng-click="progress || removeDraw(item)" ng-disabled="progress">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="view view247premium">
+
+    </div>
+    <div class="total total247premium">
+        {{ item.getTotal() | currency:"&euro;" }}
+    </div>
+
+</div>
+<!--Middle line -->
+<div class="product-bottom pay2linegeneral notalwaysseen pay2linegeneralshow{{item.getProductIdSpecial()}} pay2linegeneralshow{{item.getProductIdSpecial()}}group">
+    <div class="subscription" ng-hide="item.getProductIdSpecial() === 999">
+        <input type="checkbox" ng-model="subscription" ng-disabled="{{item.getIsSubscription()}}" ng-click="subscriptionChanged(item.getId())" ng-checked="{{item.getIsSubscription()}}" />
+        <div class="checkboxsentence">
+            {{translation.Subscription_Title}}
+            <span class="tooltip">
+                <img src="../wp-content/themes/lotto_theme/images/info_icon.png">
+                <span>SUBSCRIPTION <hr><br>Earn more VIP points, more discounts and never miss a draw! Choose your billing period of 1 week, 2 weeks or 4 weeks.
+                </span>
+            </span>
+        </div>
+        
+    </div>
+    <div class="draws" ng-show="item.getTotalDiscount() > 0">
+        <p class="savetext">
+            On this purchase you save
+        </p>
+        <p class="savenumber">
+            {{ item.getNumberOfDraws() }}
+            draws discount
+            ({{ item.getDiscount() * 100 }}%)
+        </p>
+    </div>
+    <div class="view">
+        <div class="delicon" ng-click="removeItem(item.getId())"></div>
+    </div>
+    <div class="total" ng-show="item.getTotalDiscount() > 0">
+        <p>
+            - {{ item.getTotalDiscount() | currency:"&euro;" }}
+        </p>
+    </div>
+
+    
+</div>

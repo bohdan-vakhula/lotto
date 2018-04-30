@@ -1,0 +1,258 @@
+﻿<!-- all payment methods template -->
+
+<div class="clubform mainpaymenttabs mainpaymenttabsnewcart">
+    <div class="tabspart">
+        <div class="tabsline">
+            <!--<div class="onetab tabvisa" ng-click="paymentSelect()">
+                <div class="onetabinner">
+                    <div class="moneylogos">
+                        <div class="visalogo visa"></div>
+                        <div class="visalogo visaelectron"></div>
+                        <div class="visalogo americanexpress"></div>
+                        <div class="visalogo mastercard"></div>
+                        <div class="visalogo maestro"></div>
+                    </div>
+                </div>
+            </div>-->
+            <div ng-repeat="payment in paymentSystems" ng-class="'onetab tab' + payment.name" ng-click="paymentSelect(payment)" id="cart-{{payment.name}}">
+                <div class="onetabinner">
+                    <img ng-src="../wp-content/themes/lotto_theme/images/payments/{{payment.logo}}" />
+                    <p class="tabnameformobile">{{payment.name}}</p>
+                </div>
+            </div>
+            <div class="formpart formpartnew credit" ng-show="extraInfo=='creditcard'">
+
+                <div class="clubnew formcol formcolleft mobile-hide">
+                    <div class="formdetailspart formdetailtext">
+                        {{translation.FullName}}:
+                    </div>
+                    <div class="formdetailspart formdetailtext">
+                        {{translation.Card_Number}}:
+                    </div>
+                    <div class="formdetailspart formdetailtext">
+                        {{translation.Expiration_Date}}:
+                    </div>
+                    <div class="formdetailspart formdetailtext">
+                        CVV/CV2:
+                    </div>
+                    <div class="formdetailspart formdetailtext">
+                        {{translation.Date_Of_Birth}}:
+                    </div>
+                </div>
+                <div class="mobile-show">
+                    <br><br>
+                </div>
+
+                <div class="formcol formcolleft">
+                    <div class="formdetails fullname">
+                        <div class="mobile-show">
+                            <div class="formdetailspart formdetailtext">
+                                {{translation.FullName}}:
+                            </div>
+                        </div>
+
+                        <div class="formdetailspart formdetailinput">
+                            <input type="text" ng-model="creditcard.CardHolderName" />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="formdetails cardnumber">
+                        <div class="mobile-show">
+                            <div class="formdetailspart formdetailtext">
+                                {{translation.Card_Number}}:
+                            </div>
+                        </div>
+
+                        <div class="formdetailspart formdetailinput">
+                            <input type="text" ng-model="creditcard.CreditCardNumber" valid-number />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="formdetails expirationdate">
+                        <div class="mobile-show">
+                            <div class="formdetailspart formdetailtext">
+                                {{translation.Expiration_Date}}:
+                            </div>
+                        </div>
+                        <div class="formdetailspart formdetailinput">
+                            <select ng-model="creditcard.expiration.month">
+                                <option>01</option>
+                                <option>02</option>
+                                <option>03</option>
+                                <option>04</option>
+                                <option>05</option>
+                                <option>06</option>
+                                <option>07</option>
+                                <option>08</option>
+                                <option>09</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                            <select ng-model="creditcard.expiration.year">
+                                <option ng-repeat="year in creditCardExpirationYears">{{year}}</option>
+                                
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="formdetails cvv">
+                        <div class="mobile-show">
+                            <div class="formdetailspart formdetailtext">
+                                CVV/CV2
+                            </div>
+                        </div>
+                        <div class="formdetailspart formdetailinput">
+                            <input type="text" value="xxx" id="cvvinput" ng-model="creditcard.Cvv" valid-number />
+                            <div id="checkboxpay" class="checkboxsign" ng-mouseover="showtooltippay('checkboxpay')" ng-mouseout="hidetooltippay('checkboxpay')">
+                                <!--<div id="checkboxpayinner" class="checkboxsigntooltip" ng-show="paycart=='checkboxpay'">
+                                    <p>{{translation.Last_Three_Digit}}</p>
+                                </div>-->
+                                <div id="checkboxpayinner" class="checkboxsigntooltip checkboxsigntooltipnew" ng-show="paycart=='checkboxpay'">
+                                    <img src="../wp-content/themes/lotto_theme/images/payments/cvvnew2.jpg" alt="cvv" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formdetails birthdate">
+                            <div class="mobile-show">
+                                <div class="formdetailspart formdetailtext">
+                                    {{translation.Date_Of_Birth}}
+                                </div>
+                            </div>
+                            <div class="formdetailspart formdetailinput">
+                                <select style="width:60px" ng-options="day as day for day in daysInMonth" ng-model="user.birthday.day"></select>
+                                <select style="width:60px" ng-options="month as month for month in creditCardExpirationMonths" ng-model="user.birthday.month" ng-change="updateDaysInMonth(user.birthday.month, user.birthday.year)"></select>
+                                <select style="width:60px" ng-options="year as year for year in birthdayYears" ng-model="user.birthday.year" ng-change="updateDaysInMonth(user.birthday.month, user.birthday.year)"></select>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <span ng-show="creditCard" ng-repeat="error in creditCardError | translate track by $index">{{error}}</span>
+                    </div>
+                </div>
+                <div class="clubnew formcol formcolleft2 mobile-hide">
+                    <div class="formdetailspart formdetailtext">
+                        {{translation.City}}:
+                    </div>
+                    <div class="formdetailspart formdetailtext">
+                        {{translation.Address}}:
+                    </div>
+                    <div class="formdetailspart formdetailtext">
+                        {{translation.Postal_Code}}:
+                    </div>
+
+
+                </div>
+                <div class="mobile-show">
+                    <br><br>
+                </div>
+                <div class="formcol formcolright">
+                    <div class="formdetails city">
+                        <div class="mobile-show">
+                            <div class="formdetailspart formdetailtext">
+                                {{translation.City}}
+                            </div>
+                        </div>
+                        <div class="formdetailspart formdetailinput">
+                            <input type="text" ng-model="user.city" only-alphabets />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="formdetails address">
+                        <div class="mobile-show">
+                            <div class="formdetailspart formdetailtext">
+                                {{translation.Address}}
+                            </div>
+                        </div>
+                        <div class="formdetailspart formdetailinput">
+                            <input type="text" ng-model="user.address" only-alphabets-and-numbers />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="formdetails postcode">
+                        <div class="mobile-show">
+                            <div class="formdetailspart formdetailtext">
+                                {{translation.Postal_Code}}
+                            </div>
+                        </div>
+                        <div class="formdetailspart formdetailinput">
+                            <input type="text" ng-model="user.postalCode" only-alphabets-and-numbers />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="agreetoterms">
+                        <input type="checkbox" id="term" ng-model="creditcard.terms" />
+                        <label class="agreesentence" for="term">
+                            {{translation.I_agree}}
+                            <a href="https://www.orolotto.com/terms-and-conditions/" target="_blank">
+                                {{translation.Terms_Conditions}}
+                            </a> {{translation.Terms_Conditions_18}}
+                        </label>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="paysubmit">
+                        <div class="pay">
+                            <div class="payword">
+                                {{translation.Pay}}:
+                            </div>
+                            <div class="payprice">
+                                {{ ngCart.getAmountToPay() | currency:"&euro;" }}
+                            </div>
+                        </div>
+
+                        <div class="submit">
+                            <input type="button" value="{{translation.Submit_Order}}" ng-click="progress || submitOrderNewCreditCard(creditcard, user)" />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="icesupport">
+                        {{translation.Processor_Descriptor}}
+                    </div>
+                    <div class="logospart">
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+
+
+            </div>
+            <!--End credit card form -->
+            <div class="formpart formpartnew c24" ng-show="extraInfo=='c24'">
+                <div class="c24forminner">
+                    <p>
+                        Phone in Contact24 system
+                    </p>
+                    <input type="text" ng-model="phoneOrEmail" />
+                    <input type="submit" value="{{translation.Sign_In}}" ng-click="paymentSelectMoreInfo($event,phoneOrEmail)">
+
+
+                    <span ng-show="creditCardError" ng-bind="creditCardError" class="toolittledepositerror">The Min Deposit Is 2EUR</span>
+                </div>
+            </div>
+            <div class="formpart formpartnew compay" ng-show="extraInfo=='compay'">
+                <div class="c24forminner">
+                    <p>
+                        Phone in Comepay system
+                    </p>
+                    <input type="text" ng-model="phoneOrEmail" />
+                    <input type="submit" value="{{translation.Sign_In}}" ng-click="paymentSelectMoreInfo($event,phoneOrEmail)">
+                    <span ng-show="creditCardError" ng-bind="creditCardError" class="toolittledepositerror">The Min Deposit Is 2EUR</span>
+                </div>
+            </div>
+            <div class="formpart formpartnew compay" ng-show="extraInfo=='qiwi'">
+                <div class="c24forminner">
+                    <p>
+                        Phone in Qiwi system
+                    </p>
+                    <input type="text" ng-model="phoneOrEmail" />
+                    <input type="submit" value="{{translation.Sign_In}}" ng-click="paymentSelectMoreInfo($event,phoneOrEmail)">
+                    <span ng-show="creditCardError" ng-bind="creditCardError" class="toolittledepositerror">The Min Deposit Is 2EUR</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="hidden_clicker" style="display: none">
+    <a id="hiddenclicker" href="#" class="fancybox fancybox.iframe"></a>
+</div>
+
+<br><br>

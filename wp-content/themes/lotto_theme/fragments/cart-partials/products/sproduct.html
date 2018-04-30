@@ -1,0 +1,84 @@
+﻿<div class="pay2linegeneral pay2linegeneralupper pay2linegeneralupperpersonal pay2linegeneralupperanytype" ng-class="{'active': active==item.getId()}">
+    <div class="loto lotofor{{ item.getLotteryName() }}">
+        <div class="lottinner sliderlogo{{ item.getLotteryName() }}"></div>
+    </div>
+    <div class="ticket">
+        {{ item.getLotteryName()}}
+    </div>
+    <div class="linesdraws lines">
+        <div class="wordlines">
+            <ng-pluralize count="item.getNumberOfLines()" when="{1: '{{translation.Line}}', 'other':'{{translation.Lines}}'}"></ng-pluralize>
+        </div>
+        <input type="text" ng-value="item.getNumberOfLines()" ng-disabled="true" />
+    </div>
+    <div class="linesdraws draws">
+        <div class="wordlines">
+            <ng-pluralize count="item.getNumberOfDraws()" when="{1: '{{translation.Draw}}', 'other':'{{translation.Draws}}'}"></ng-pluralize>
+        </div>
+        <input type="text" ng-value="item.getNumberOfDraws()" ng-disabled="true" />
+    </div>
+
+    <div class="view" ng-click="showDetail(item.getId())">
+        <div class="viewmoreless viewmore">
+            <div class="viewmorearrow"></div>
+        </div>
+    </div>
+    <div class="total">
+        {{ item.getTotal() | currency:"&euro;" }}
+    </div>
+</div>
+<!--Middle line -->
+<div class="pay2linegeneral notalwaysseen">
+    <div class="subscription">
+        <input type="checkbox" ng-model="subscription"  ng-click="subscriptionChanged(item.getId())" ng-checked="{{item.getIsSubscription()}} " />
+        <div class="checkboxsentence">
+            {{translation.Subscription_Title}}
+        </div>
+        <div class="checkboxsign" ng-mouseover="showthetooltip(item.getId())" ng-mouseout="hidethetooltip(item.getId())">
+            <div class="checkboxsigntooltip" ng-show="tooltipshown==item.getId()">
+                <p>{{translation.Subscription_ToolTip}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="draws" ng-show="item.getTotalDiscount() > 0">
+        <p class="savetext">
+            {{translation.Purchase_Save}}
+        </p>
+        <p class="savenumber">
+            {{ item.getNumberOfDraws() }}
+            {{translation.Draws}} 
+            {{translation.Discount}}
+            ({{(item.getDiscount()   * 100) | floor }}%)
+        </p>
+    </div>
+    <div class="view">
+        <div class="delicon" ng-click="removeItem(item.getId())"></div>
+    </div>
+    <div class="total" ng-show="item.getTotalDiscount() > 0">
+        <p>
+            - {{ item.getTotalDiscount() | currency:"&euro;"}}
+        </p>
+    </div>
+    
+</div>
+<!--Down line-->
+<div class="hiddenlinenumbers animated" ng-show="active==item.getId()" ng-class="{ 'fadeIn': active==item.getId(), 'fadeOut': active!==item.getId() }">
+    <h3>
+        {{translation.Your_Lines}}
+    </h3>
+    <div class="alllines alllinesof{{ item.getLotteryName() }}">
+        <div class="alloneline onelineof{{ item.getLotteryName() }}" ng-repeat="lines in item.getNumbersSantized() track by $index" >
+            <div class=" onelinetitle">
+            <p>
+                {{translation.Line}} {{$index + 1}}
+            </p>
+            <div class="pencil" ng-click="editLine($index, item)">
+            </div>
+        </div>
+            <div class="lineofnumbers">
+                <div class="number numberblue" ng-repeat="number in item.getLinesNumbers($index) ">{{number}}   </div>
+                <div class="number numberorange" ng-repeat="specialnumber in item.getLinesSpecialNumbers($index) track by $index">{{specialnumber}}</div>
+            </div>
+        </div>
+    </div>
+</div>

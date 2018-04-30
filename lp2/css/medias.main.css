@@ -1,0 +1,1111 @@
+@media screen and (max-width: 1024px) {
+.wrapper {
+	width: 700px;
+}
+div.home-section-1 div.content h1 {
+    font-size: 20px;
+}
+div.home-section-1 div.content > p {
+    font-size: 18px;
+}
+div.home-section-1 div.content div.tag {
+    background-image: url("../img/tag-bg.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    font-size: 0;
+    height: 144px;
+    margin: -25px 0 0 -13px;
+    text-align: center;
+    width: 103.7%;
+}
+div.home-section-1 div.content div.tag > div.inl p.dollar {
+    font-size: 33px;
+}
+div.home-section-1 div.content div.tag > div.inl p.dollar small {
+    font-size: 17px;
+    position: relative;
+    top: 5px;
+    vertical-align: top;
+}
+div.home-section-1 div.content div.tag > div.inl {
+    font-size: 15px;
+    margin: 40px 0 0;
+    min-height: 50px;
+    vertical-align: middle;
+    width: 32%;
+}
+div.home-section-1 div.content div.tag > div.inl.middle {
+    width: 35%;
+}
+div.home-section-1 div.content div.tag > div.inl img {
+	max-width: 70%;
+}
+div.home-section-1 div.content div.tag > div.inl span.country {
+    background-image: url("../img/flag-1.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: "AvenirLTStd-Heavy";
+    font-size: 14px;
+    font-weight: normal;
+    margin: 7px 0 0;
+    padding: 5px 0 5px 33px;
+}
+div.home-section-1 div.content div.tag > div.inl div.counter #tiles {
+    display: block;
+    font-size: 22px;
+    margin: 6px 0 0;
+}
+div.home-section-1 div.content div.tag > div.inl div.counter span.inl {
+    background-image: url("../img/timing-icon.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 15px auto;
+    font-size: 11px;
+    margin: 0;
+    padding: 5px 0 4px 19px;
+    text-transform: uppercase;
+}
+div.home-section-1 div.content div.tag > div.inl {
+    font-size: 15px;
+    margin: 48px 0 0;
+    min-height: 50px;
+    vertical-align: middle;
+    width: 32%;
+}
+div.home-section-1 div.content form h4 {
+    color: #323232;
+    font-family: "AvenirLTStd-Medium";
+    font-size: 19px;
+    font-weight: normal;
+    margin: 6px 0 4px;
+    padding: 0 26px;
+    text-align: left;
+    text-transform: uppercase;
+}
+div.home-section-1 div.content form .btn-1 {
+    background-image: url("../img/btn-1.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 55px;
+    margin: 0;
+    padding: 0;
+    width: 175px;
+}
+div.home-section-1 div.content form > div.inl input[type="text"], div.home-section-1 div.content form > div.inl select {
+    background-color: white;
+    border: 2px solid white;
+    color: #1a1a1a;
+    display: block;
+    font-size: 16px;
+    margin: 13px 0;
+    padding: 11px 12px;
+    width: 75%;
+}
+div.home-section-1 div.content form > div.inl select {
+    -moz-appearance: none;
+    background-image: url("../img/select-bg-1.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 89%;
+}
+div.home-section-1 div.content form > div.inl.right {
+    margin: -25px 0 0;
+    text-align: center;
+}
+div.home-section-1 div.grid > i {
+	display: none;
+}
+div.home-section-1 div.grid > div.inl {
+    margin: 30px 0;
+    vertical-align: middle;
+    width: 32%;
+}
+div.home-section-1 div.headline {
+    background-image: url("../img/headline-1.png");
+    background-position: right 43px;
+    background-repeat: no-repeat;
+    background-size: 636px auto;
+    display: block;
+    height: 171px;
+    margin: 0 0 -48px;
+    position: relative;
+    text-align: left;
+    z-index: 50;
+}
+div.home-section-1 div.headline img.logo {
+    margin: 0;
+    padding: 44px 0 0;
+    width: 40%;
+}
+div.home-section-1 div.headline label {
+    background-color: white;
+    background-image: url("../img/flag-1.png");
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+    display: block;
+    float: right;
+    margin: 0;
+    padding: 0 0 0 30px;
+    width: 18%;
+}
+div.home-section-2 div.row-1 {
+    background-color: #f0f0f0;
+    background-image: url("../img/home-section-2.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1164px auto;
+    display: block;
+    height: 625px;
+    margin: 0;
+    text-align: right;
+}
+div.home-section-2 div.row-1 form {
+    background-color: #153e4a;
+    background-image: url("../img/form-bg-2.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    border-bottom: 3px solid #1a303c;
+    border-radius: 6px;
+    border-top: 3px solid #9ba5ab;
+    margin: 26px 0 0;
+    padding: 11px 0;
+    text-align: center;
+    width: 41.3%;
+}
+div.home-section-2 div.row-1 form .btn-3 {
+    background-image: url("../img/btn-3.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 70px;
+    margin: 3px 0 0;
+    width: 90%;
+}
+div.home-section-2 div.row-1 form #tiles span {
+    background-color: #2b424d;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #1d2d34 inset;
+    color: white;
+    font-size: 32px;
+    font-weight: normal;
+    margin: 0 4px;
+    padding: 3px 8px;
+    vertical-align: middle;
+}
+div.home-section-2 div.row-1 form p {
+    color: white;
+    font-family: "AvenirLTStd-Medium";
+    font-size: 19px;
+    font-weight: normal;
+    margin: 8px 0;
+    text-shadow: 1px 1px 1px #243841;
+    text-transform: uppercase;
+}
+div.home-section-2 div.row-1 form input[type="text"] {
+    background-color: white;
+    border-radius: 3px;
+    color: #1a1a1a;
+    display: block;
+    font-family: "AvenirLTStd-Book";
+    font-size: 18px;
+    font-weight: normal;
+    margin: 13px auto;
+    padding: 8px 15px;
+    width: 79.5%;
+}
+div.home-section-2 div.row-1 h3 {
+    color: #2b424d;
+    font-size: 29px;
+    margin: 21px 0 0;
+    text-align: center;
+}
+div.home-section-2 div.row-1 h3 span {
+    display: block;
+    font-family: "AvenirLTStd-Book";
+    font-size: 26px;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+}
+div.home-section-2 div.row-1 {
+    background-color: #f0f0f0;
+    background-image: url("../img/home-section-2.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1164px auto;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0 0 38px;
+    text-align: right;
+}
+div.home-section-2 div.grid > i {
+    background-image: url("../img/liner-2.png");
+    background-position: center top;
+    background-repeat: repeat-y;
+    display: none;
+    height: 173px;
+    margin: 0 0.7%;
+    vertical-align: middle;
+    width: 1px;
+}
+div.home-section-2 div.grid > div.inl {
+    margin: 14px 0;
+    vertical-align: bottom;
+    width: 30.8%;
+}
+div.home-section-2 header img.bg {
+    margin: 0 0 -6px;
+    width: 54%;
+}
+div.home-section-3 {
+    background-image: url("../img/home-section-3.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1340px auto;
+    display: block;
+    margin: 0;
+    min-height: 300px;
+}
+div.home-section-3 div.headline img.logo {
+    margin: 0;
+    padding: 21px 0 48px;
+    width: 220px;
+}
+div.home-section-3 div.headline div.count-section div.inl.money h3 {
+    color: #cb9c08;
+    font-family: "AvenirLTStd-Heavy";
+    font-size: 31px;
+    font-weight: normal;
+    margin: 0;
+}
+div.home-section-3 div.headline div.count-section div.inl.counter p {
+    color: #595959;
+    font-family: "AvenirLTStd-Medium";
+    font-size: 10px;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+}
+div.home-section-3 div.headline div.count-section div.inl.counter div#tiles span {
+    color: #339966;
+    display: inline-block;
+    font-family: "AvenirLTStd-Medium";
+    font-size: 17px;
+    font-weight: normal;
+    vertical-align: top;
+    width: 23%;
+}
+div.home-section-3 div.headline div.count-section div.inl.counter div#tiles span small {
+    color: #595959;
+    display: block;
+    font-size: 7px;
+    margin: 0;
+    text-transform: uppercase;
+}
+div.home-section-3 div.headline div.count-section div.inl.money {
+    margin: 11px 0 0;
+    text-align: center;
+    width: 41%;
+}
+div.home-section-3 div.headline div.count-section div.inl.counter {
+    margin: 9px 4% 0 0;
+    text-align: center;
+    width: 41%;
+}
+div.home-section-3 div.headline div.count-section {
+    display: block;
+    font-size: 0;
+    height: 143px;
+    margin: 6px auto 0;
+    text-align: right;
+    width: 72%;
+}
+div.home-section-3 div.sub0title-section > div.inl h3 {
+    color: #339966;
+    font-family: "bebas_neuebold";
+    font-size: 55px;
+    font-weight: normal;
+    margin: 0 10px 0 0;
+    text-transform: uppercase;
+}
+div.home-section-3 div.sub0title-section > div.inl p {
+    color: #4b4b4b;
+    font-family: "AvenirLTStd-Black";
+    font-size: 11px;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+}
+div.home-section-3 div.content h3 {
+    color: #595959;
+    font-family: "AvenirLTStd-Medium";
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}
+div.home-section-3 div.content h3 strong {
+    display: block;
+    font-family: "AvenirLTStd-Black";
+    font-size: 23px;
+    font-weight: normal;
+}
+div.home-section-3 div.content p {
+    color: #595959;
+    font-family: "AvenirLTStd-Medium";
+    font-size: 23px;
+    font-weight: normal;
+    margin: 16px 60px 0;
+    text-align: center;
+}
+div.home-section-3 div.content img.right, div.home-section-3 div.content img.left {
+    display: none;
+    float: right;
+    margin: 30px -80px 0 0;
+}
+div.home-section-3 div.content form {
+    background-color: #339966;
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px 0 #777;
+    display: block;
+    margin: 40px auto 0;
+    min-height: 200px;
+    overflow: hidden;
+    padding: 14px 0 37px;
+    position: relative;
+    text-align: center;
+    top: 0;
+    width: 74%;
+    z-index: 50;
+}
+div.home-section-3 div.grid > i {
+    background-image: url("../img/liner-1.png");
+    background-position: center top;
+    background-repeat: repeat-y;
+    display: none;
+    height: 173px;
+    margin: 0 0.7%;
+    vertical-align: middle;
+    width: 1px;
+}
+div.home-section-3 div.grid > div.inl {
+    margin: 22px 0;
+    vertical-align: bottom;
+    width: 31%;
+}
+div.home-section-3 div.content img.rarrow {
+    float: right;
+    margin: -280px 31px 0 0;
+    position: relative;
+    z-index: 60;
+}
+div.home-section-3 div.content img.larrow {
+    float: left;
+    margin: -280px 0 0 35px;
+    position: relative;
+    z-index: 60;
+}
+}
+
+@media screen and (max-width: 770px) {
+.wrapper {
+    width: 600px;
+}
+.placer {width:15%}
+div.home-section-1 div.content > p {
+    font-size: 21px;
+}
+div.home-section-1 div.content h1 {
+    font-size: 20px;
+}
+.signuptitle {padding-bottom:5px}
+div.home-section-1 div.content div.tag > div.inl p.dollar {
+    font-size: 27px;
+}
+div.home-section-1 div.content div.tag > div.inl span.country {
+    background-image: url("../img/flag-1.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: "AvenirLTStd-Heavy";
+    font-size: 12px;
+    font-weight: normal;
+    margin: 7px 0 0;
+    padding: 6px 0 6px 33px;
+}
+div.home-section-1 div.content div.tag > div.inl div.counter span.inl {
+    background-image: url("../img/timing-icon.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 15px auto;
+    font-size: 9px;
+    margin: 0;
+    padding: 5px 0 4px 19px;
+    text-transform: uppercase;
+}
+div.home-section-1 div.content div.tag > div.inl div.counter #tiles {
+    display: block;
+    font-size: 19px;
+    margin: 6px 0 0;
+}
+div.home-section-1 div.content form h4 {
+    color: #323232;
+    font-family: "AvenirLTStd-Medium";
+    font-size: 16px;
+    font-weight: normal;
+    margin: 6px 0 4px;
+    padding: 0 26px;
+    text-align: left;
+    text-transform: uppercase;
+}
+div.home-section-1 div.content form > div.inl {
+    font-size: 15px;
+    text-align: left;
+    width: 90%;
+}
+div.home-section-1 div.content form > div.inl input[type="text"], div.home-section-1 div.content form > div.inl select {
+    background-color: white;
+    border: 2px solid white;
+    color: #1a1a1a;
+    display: block;
+    font-size: 16px;
+    margin: 13px 0;
+    padding: 11px 12px;
+    width: 94%;
+}
+div.home-section-1 div.content form > div.inl select {
+	width: 100%;
+}
+div.home-section-1 div.content form > div.inl.right {
+    margin: 0;
+    text-align: center;
+}
+div.home-section-1 div.content form > div.inl.right img {
+	display: none;
+}
+div.home-section-1 div.content div.tag {
+    background-image: url("../img/tag-bg.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    font-size: 0;
+    height: 144px;
+    margin: -25px 0 0 -10px;
+    text-align: center;
+    width: 103.7%;
+}
+div.home-section-2 div.row-1 {
+    background-color: #f0f0f0;
+    background-image: url("../img/home-section-2.jpg");
+    background-position: center -71px;
+    background-repeat: no-repeat;
+    background-size: 1164px auto;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0 0 38px;
+    text-align: right;
+}
+div.home-section-2 header img.bg {
+    margin: 0 0 -4px;
+    width: 54%;
+}
+div.home-section-2 div.row-1 form {
+    background-color: #153e4a;
+    background-image: url("../img/form-bg-2.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    border-bottom: 3px solid #1a303c;
+    border-radius: 6px;
+    border-top: 3px solid #9ba5ab;
+    display: block;
+    margin: 30px auto;
+    padding: 11px 0;
+    text-align: center;
+    width: 71.3%;
+}
+div.home-section-2 div.row-1 form .btn-3 {
+    background-image: url("../img/btn-3.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 70px;
+    margin: 3px 0 10px;
+    width: 87%;
+}
+div.home-section-2 div.grid img.banks {
+    margin: 30px 4px 0;
+    vertical-align: middle;
+}
+div.home-section-2 div.row-1 h3 {
+    color: #2b424d;
+    font-size: 22px;
+    margin: 21px 0 0;
+    text-align: center;
+}
+div.home-section-2 div.row-1 h3 span {
+    display: block;
+    font-family: "AvenirLTStd-Book";
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+}
+div.home-section-2 div.row-1 {
+    position: relative;
+    overflow: hidden;
+}
+div.home-section-3 {
+    background-image: url("../img/home-section-3.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1130px auto;
+    display: block;
+    margin: 0;
+    min-height: 300px;
+}
+div.home-section-3 div.headline img.logo {
+    margin: 0;
+    padding: 11px 0 48px;
+    width: 220px;
+}
+div.home-section-3 div.headline div.count-section div.inl.money {
+    margin: 0;
+    text-align: center;
+    width: 43%;
+}
+div.home-section-3 div.headline div.count-section div.inl.counter {
+    margin: 0 0 0 0;
+    text-align: center;
+    width: 44%;
+}
+div.home-section-3 div.headline div.count-section div.inl.money h3 {
+    color: #cb9c08;
+    font-family: "AvenirLTStd-Heavy";
+    font-size: 27px;
+    font-weight: normal;
+    margin: 0;
+}
+div.home-section-3 div.headline div.count-section div.inl.counter div#tiles span small {
+    color: #595959;
+    display: block;
+    font-size: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+div.home-section-3 div.headline div.count-section div.inl.counter div#tiles span {
+    color: #339966;
+    display: inline-block;
+    font-family: "AvenirLTStd-Medium";
+    font-size: 17px;
+    font-weight: normal;
+    vertical-align: top;
+    width: 19%;
+}
+div.home-section-3 div.sub0title-section > div.inl h3 {
+    color: #339966;
+    font-family: "bebas_neuebold";
+    font-size: 43px;
+    font-weight: normal;
+    margin: 0 10px 0 0;
+    text-transform: uppercase;
+}
+div.home-section-3 div.sub0title-section > div.inl {
+    width: 100%;
+}
+div.home-section-3 div.sub0title-section > div.inl.left {
+    text-align: center;
+}
+div.home-section-3 div.sub0title-section > div.inl.right {
+    text-align: center;
+}
+div.home-section-3 div.content h3 {
+    color: #595959;
+    font-family: "AvenirLTStd-Medium";
+    font-size: 22px;
+    font-weight: normal;
+    margin: 0 40px;
+    text-align: center;
+}
+div.home-section-3 div.content h3 strong {
+    display: block;
+    font-family: "AvenirLTStd-Black";
+    font-size: 21px;
+    font-weight: normal;
+}
+div.home-section-3 div.content img.rarrow,
+div.home-section-3 div.content img.larrow {
+    display: none;
+}
+div.home-section-3 div.content form {
+    background-color: #339966;
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px 0 #777;
+    display: block;
+    margin: 40px auto 0;
+    min-height: 200px;
+    overflow: hidden;
+    padding: 14px 0 37px;
+    position: relative;
+    text-align: center;
+    top: 0;
+    width: 93%;
+    z-index: 50;
+}
+}
+
+@media screen and (max-width: 600px) {
+.wrapper {
+    width: 380px;
+}
+div.home-section-1 div.content h2 {font-size:18px;}
+div.home-section-1 div.content > p {
+    font-size: 16px;
+}
+div.home-section-1 div.content div.tag {
+    background-color: #00c984;
+    background-image: none;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    font-size: 0;
+    height: auto;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+div.home-section-1 div.headline label {
+    background-color: white;
+    background-image: url("../img/flag-1.png");
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+    display: block;
+    float: right;
+    margin: 0;
+    padding: 0 0 0 30px;
+    width: 28%;
+}
+div.home-section-1 div.headline img.logo {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+}
+div.home-section-1 div.headline {
+    background-image: url("../img/headline-1.png");
+    background-position: right 51px;
+    background-repeat: no-repeat;
+    background-size: 566px auto;
+    display: block;
+    height: 171px;
+    margin: 0 0 -48px;
+    position: relative;
+    text-align: left;
+    z-index: 50;
+}
+div.home-section-1 div.content div.tag > div.inl {
+    font-size: 15px;
+    margin: 10px 0;
+    min-height: 50px;
+    vertical-align: middle;
+    width: 100%;
+}
+div.home-section-1 div.content div.tag > div.inl img {
+    display: block;
+    margin: 0 auto;
+    max-width: 70%;
+}
+div.home-section-1 div.content div.tag > div.inl span.country {
+    background-image: url("../img/flag-1.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: "AvenirLTStd-Heavy";
+    font-size: 16px;
+    font-weight: normal;
+    margin: 7px 0 0;
+    padding: 6px 0 6px 33px;
+}
+div.home-section-1 div.content div.tag > div.inl div.counter span.inl {
+    background-image: url("../img/timing-icon.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 15px auto;
+    font-size: 15px;
+    margin: 0;
+    padding: 5px 0 4px 19px;
+    text-transform: uppercase;
+}
+div.home-section-1 div.content div.tag > div.inl div.counter #tiles {
+    display: block;
+    font-size: 35px;
+    margin: 6px 0 0;
+}
+div.home-section-1 div.content div.tag > div.inl {
+    font-size: 15px;
+    margin: 10px 0;
+    min-height: 50px;
+    padding: 16px 0;
+    vertical-align: middle;
+    width: 100%;
+}
+div.home-section-1 div.content div.tag > div.inl.middle {
+    width: 100%;
+    margin: 0px;
+}
+div.home-section-1 div.content div.tag > div.inl.middle {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+div.home-section-1 div.content form > div.inl input[type="text"] {
+    background-color: white;
+    border: 2px solid white;
+    color: #1a1a1a;
+    display: block;
+    font-size: 16px;
+    margin: 13px 0;
+    padding: 11px 12px;
+    width: 91%;
+}
+div.home-section-1 div.grid > div.inl {
+    margin: 30px 0;
+    vertical-align: middle;
+    width: 95%;
+}
+div.home-section-1 div.content form {margin-top:20px;}
+
+.placer {width:95%;}
+
+.placer:nth-child(5) {
+	width: 50%;
+}
+.placer:last-child{ 
+    
+	margin-right: 0;
+	margin-left: 0;
+	margin-top:10px;
+    width: 100%;
+}
+div.home-section-2 div.row-1 form {
+    background-color: #153e4a;
+    background-image: url("../img/form-bg-2.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    border-bottom: 3px solid #1a303c;
+    border-radius: 6px;
+    border-top: 3px solid #9ba5ab;
+    display: block;
+    margin: 30px auto;
+    padding: 11px 0;
+    text-align: center;
+    width: 100%;
+}
+div.home-section-2 header img.bg {
+    display: none;
+    margin: 0 0 -4px;
+    width: 54%;
+}
+div.home-section-2 header img.logo {
+    display: block;
+    margin: 0 auto;
+    padding: 19px 0;
+    width: 71%;
+}
+div.home-section-2 div.row-1 h3 {
+    color: #2b424d;
+    font-size: 27px;
+    margin: 21px 0 0;
+    text-align: center;
+}
+div.home-section-2 div.row-1 h3 span {
+    display: block;
+    font-family: "AvenirLTStd-Book";
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+}
+div.home-section-2 div.grid > div.inl {
+    margin: 14px 0;
+    vertical-align: bottom;
+    width: 44%;
+}
+div.home-section-3 {
+    background-image: url("../img/home-section-3.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 800px auto;
+    display: block;
+    margin: 0;
+    min-height: 300px;
+}
+div.home-section-3 div.headline img.logo {
+    margin: 0;
+    padding: 11px 0 30px;
+    width: 140px;
+}
+div.home-section-3 div.headline div.count-section {
+    display: block;
+    font-size: 0;
+    height: 80px;
+    margin: 0 auto;
+    text-align: right;
+    width: 72%;
+}
+div.home-section-3 div.headline div.count-section div.inl.money h3 {
+    color: #cb9c08;
+    font-family: "AvenirLTStd-Heavy";
+    font-size: 19px;
+    font-weight: normal;
+    margin: 0;
+}
+div.home-section-3 div.headline div.count-section div.inl.counter {
+    margin: 5px 0 0;
+    text-align: center;
+    width: 44%;
+}
+div.home-section-3 div.headline div.count-section div.inl.counter div#tiles span {
+    color: #339966;
+    display: inline-block;
+    font-family: "AvenirLTStd-Medium";
+    font-size: 12px;
+    font-weight: normal;
+    vertical-align: top;
+    width: 19%;
+}
+div.home-section-3 div.headline div.count-section div.inl.counter p {
+    color: #595959;
+    font-family: "AvenirLTStd-Medium";
+    font-size: 9px;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+}
+div.home-section-3 div.headline div.count-section div.inl.money {
+    margin: 8px 0 0;
+    text-align: center;
+    width: 43%;
+}
+div.home-section-3 div.headline div.count-section div.inl.counter {
+    margin: 8px 0 0;
+    text-align: center;
+    width: 44%;
+}
+div.home-section-3 div.content h3 {
+    color: #595959;
+    font-family: "AvenirLTStd-Medium";
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 15px;
+    text-align: center;
+}
+div.home-section-3 div.content h3 strong {
+    display: block;
+    font-family: "AvenirLTStd-Black";
+    font-size: 17px;
+    font-weight: normal;
+}
+div.home-section-3 div.content p {
+    color: #595959;
+    font-family: "AvenirLTStd-Medium";
+    font-size: 18px;
+    font-weight: normal;
+    margin: 16px 31px 0;
+    text-align: center;
+}
+div.home-section-3 div.content form .btn-3 {
+    background-image: url("../img/btn-5.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 67px;
+    margin: 10px 0 20px;
+    width: 310px;
+}
+div.home-section-3 div.content form input[type="text"] {
+    background-color: white;
+    border-radius: 3px;
+    color: #1a1a1a;
+    display: block;
+    font-family: "AvenirLTStd-Book";
+    font-size: 18px;
+    font-weight: normal;
+    margin: 13px auto;
+    padding: 11px 19px;
+    width: 76%;
+}
+div.home-section-3 div.grid > div.inl {
+    margin: 22px 0;
+    vertical-align: bottom;
+    width: 46%;
+}
+}
+
+@media screen and (max-width: 420px) {
+.wrapper {
+    width: 280px;
+}
+div.home-section-1 div.content > p {
+    font-size: 14px;
+}
+div.home-section-1 div.content form > div.inl input[type="text"] {
+    background-color: white;
+    border: 2px solid white;
+    color: #1a1a1a;
+    display: block;
+    font-size: 16px;
+    margin: 13px 0;
+    padding: 11px 12px;
+    width: 88%;
+}
+div.home-section-1 div.content h1 {
+    font-size: 20px;
+}
+div.home-section-1 div.headline label {
+    background-color: white;
+    background-image: url("../img/flag-1.png");
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+    display: block;
+    float: right;
+    margin: 0;
+    padding: 0 0 0 30px;
+    width: 32%;
+}
+div.home-section-1 div.headline img.logo {
+    margin: 5px 0 0;
+    padding: 0;
+    width: 50%;
+}
+div.home-section-1 div.headline {
+    background-image: url("../img/headline-1.png");
+    background-position: right 67px;
+    background-repeat: no-repeat;
+    background-size: 449px auto;
+    display: block;
+    height: 171px;
+    margin: 0 0 -48px;
+    position: relative;
+    text-align: left;
+    z-index: 50;
+}
+div.home-section-1 div.content div.tag > div.inl div.counter #tiles {
+    display: block;
+    font-size: 27px;
+    margin: 6px 0 0;
+}
+div.home-section-2 div.row-1 h3 {
+    color: #2b424d;
+    font-size: 19px;
+    margin: 21px 0 0;
+    text-align: center;
+}
+div.home-section-2 div.row-1 h3 span {
+    display: block;
+    font-family: "AvenirLTStd-Book";
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+}
+div.home-section-2 div.row-1 form input[type="text"] {
+    background-color: white;
+    border-radius: 3px;
+    color: #1a1a1a;
+    display: block;
+    font-family: "AvenirLTStd-Book";
+    font-size: 18px;
+    font-weight: normal;
+    margin: 13px auto;
+    padding: 8px 15px;
+    width: 75.5%;
+}
+div.home-section-2 div.grid img.banks {
+    margin: 22px 4px 0;
+    vertical-align: middle;
+}
+div.home-section-3 {
+    background-image: url("../img/home-section-3-mobile.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 310px auto;
+    display: block;
+    margin: 0;
+    min-height: 300px;
+}
+div.home-section-3 div.headline img.logo {
+    margin: 0;
+    padding: 11px 0 30px;
+    width: 200px;
+}
+div.home-section-3 div.headline div.count-section div.inl.money {
+    margin: 14px auto 0;
+    text-align: center;
+    width: 100%;
+}
+div.home-section-3 div.headline div.count-section div.inl.money h3 {
+    color: #cb9c08;
+    font-family: "AvenirLTStd-Heavy";
+    font-size: 23px;
+    font-weight: normal;
+    margin: 0;
+}
+div.home-section-3 div.headline div.count-section div.inl.counter {
+    margin: 4px 0 0;
+    text-align: center;
+    width: 100%;
+}
+div.home-section-3 div.headline div.count-section div.inl.counter div#tiles span {
+    color: #339966;
+    display: inline-block;
+    font-family: "AvenirLTStd-Medium";
+    font-size: 16px;
+    font-weight: normal;
+    vertical-align: top;
+    width: 19%;
+}
+div.home-section-3 div.sub0title-section > div.inl h3 {
+    color: #339966;
+    font-family: "bebas_neuebold";
+    font-size: 33px;
+    font-weight: normal;
+    margin: 0 10px 0 0;
+    text-transform: uppercase;
+}
+div.home-section-3 div.sub0title-section {
+    display: block;
+    font-size: 0;
+    margin: 36px 0;
+}
+div.home-section-3 div.content form .btn-3 {
+    background-image: url("../img/btn-5.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 44px;
+    margin: 10px 0 20px;
+    width: 230px;
+}
+div.home-section-3 div.content form img {
+    max-width: 80%;
+}
+div.home-section-3 div.content h3 {
+    color: #595959;
+    font-family: "AvenirLTStd-Medium";
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0 15px;
+    text-align: center;
+}
+}

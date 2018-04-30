@@ -1,0 +1,190 @@
+[28-Nov-2016 11:22:10 UTC] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/orolotto/public_html/lp/api.php on line 64
+[28-Nov-2016 11:22:54 UTC] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/orolotto/public_html/lp/api.php on line 64
+[28-Nov-2016 11:22:57 UTC] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/orolotto/public_html/lp/api.php on line 64
+[28-Nov-2016 11:31:35 UTC] PHP Parse error:  syntax error, unexpected ''";</script>'' (T_CONSTANT_ENCAPSED_STRING) in /home/orolotto/public_html/lp/api.php on line 87
+[28-Nov-2016 11:32:04 UTC] PHP Parse error:  syntax error, unexpected ''/'' (T_CONSTANT_ENCAPSED_STRING) in /home/orolotto/public_html/lp/api.php on line 87
+[28-Nov-2016 11:32:05 UTC] PHP Parse error:  syntax error, unexpected ''/'' (T_CONSTANT_ENCAPSED_STRING) in /home/orolotto/public_html/lp/api.php on line 87
+[29-Jan-2017 21:15:14 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724514/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:15:14 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:15:32 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724532/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:15:32 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:15:46 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724546/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:15:46 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:16:00 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724560/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:16:00 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:16:15 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724575/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:16:15 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:16:29 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724589/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:16:29 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:16:36 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724596/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:16:36 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:16:48 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724608/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:16:48 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:16:49 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724609/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:16:49 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:17:47 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724667/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:17:47 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:18:11 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724691/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:18:11 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:18:41 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724721/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:18:41 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:20:42 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724842/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:20:42 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:20:47 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724847/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:20:47 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:20:52 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724852/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:20:52 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:21:14 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724874/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:21:14 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:21:19 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724879/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:21:19 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:21:29 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724889/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:21:29 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:21:35 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724895/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:21:35 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:21:56 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724916/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:21:56 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:22:38 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724958/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:22:38 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:22:48 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485724967/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:22:48 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106
+[29-Jan-2017 21:23:46 UTC] PHP Warning:  file_get_contents(https://www.icelotto.com/rss/draws/?a=1485725026/): failed to open stream: HTTP request failed! HTTP/1.0 502 Bad Gateway
+ in /home/orolotto/public_html/lp/api.php on line 105
+[29-Jan-2017 21:23:46 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/orolotto/public_html/lp/api.php:106
+Stack trace:
+#0 /home/orolotto/public_html/lp/api.php(106): SimpleXMLElement->__construct('')
+#1 /home/orolotto/public_html/lp/index.php(3): getFeed()
+#2 {main}
+  thrown in /home/orolotto/public_html/lp/api.php on line 106

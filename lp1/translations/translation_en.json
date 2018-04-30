@@ -1,0 +1,15 @@
+{  
+	"JOIN" : "Join A Group and increase your chances of",
+	"WIN" : "WINNING A LOTTERY!",
+	"SIGN_UP" : "Sign up and get a FREE Lottery Ticket",
+	"NAME" : "Your Name",
+	"MAIL" : "Email Address",
+	"MobilePhone" : "Phone Number",
+	"SUBMIT" : "CONTINUE",
+	"NEXT_DRAW" : "Next draw in :",
+	"fieldName_Name" : "Name",
+	"fieldName_LastName" : "Last Name",
+	"fieldName_Phone" : "Phone",
+	"fieldName_Mail" : "Email"
+
+}
